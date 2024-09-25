@@ -106,9 +106,7 @@
               if (collisionStates[this.index] !== collisionStates[j]) {   
                 balls[j].color = this.color = randomColor();  
                 collisionCounter++;  
-                updateCollisionCounterDisplay();  
-                
-                // 记录碰撞次序
+                updateCollisionCounterDisplay(); 
                 collisionStates[this.index] = collisionCounter;
                 collisionStates[j] = collisionCounter;
               } 
@@ -121,7 +119,7 @@
       let collisionCounter = 0;
       let collisionStates = [];
 
-      while (balls.length < 12) {
+      while (balls.length < 10) {
         const size = random(10, 20);
         let ball = new Ball(
           random(0 + size, width - size),
